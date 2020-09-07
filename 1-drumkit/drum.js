@@ -11,8 +11,7 @@ const playSound = (e) => {
   key.classList.add('playing');
   audio.currentTime = 0;
   audio.play();
-  setTimeout(1000);
-  key.classList.remove('playing');
+  key.classList.toggle('playing');
 };
 
 window.addEventListener('keydown', playSound)

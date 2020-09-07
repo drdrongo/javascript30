@@ -20,11 +20,18 @@ body {
 }
 
 .clock-body {
-  border: 10px solid white;
+  border: 20px solid white;
   border-radius: 50%;
   width: 400px;
   height: 400px;
+}
+
+.clock-face {
+  width: 400px;
+  height: 400px;
   position: relative;
+  transform: translateY(-3px);
+
 }
 
 .hand {
@@ -34,19 +41,24 @@ body {
   position: absolute;
   top: 50%;
   transform-origin: 100%;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0, 1.81, 0.54, 0.9);
   transform: rotate(90deg);
 }
 
 .hour-hand {
-
+  width: 30%;
+  right: 50%;
 }
 
 .minute-hand {
-
+  background-color: rgba(50, 50, 50, 1);
 }
 
 .second-hand {
+  background-color: red;
+}
+
+.smooth-movement {
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0, 1.81, 0.54, 0.9);
 
 }

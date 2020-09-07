@@ -1,7 +1,6 @@
-console.log("hello!");
-
-const removePlaying = (key) => {
-  key.classList.remove('playing');
+const removeTransition = (e) => {
+  if (e.propertyName !== 'transform') return;
+  this.classList.remove('playing');
 }
 
 const playSound = (e) => {
@@ -11,7 +10,9 @@ const playSound = (e) => {
   key.classList.add('playing');
   audio.currentTime = 0;
   audio.play();
-  key.classList.toggle('playing');
 };
+
+const keys = document.querySelectorAll('.drum-key')
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
 window.addEventListener('keydown', playSound)

@@ -1,6 +1,7 @@
 const removeTransition = (e) => {
   if (e.propertyName !== 'transform') return;
-  this.classList.remove('playing');
+  // console.log(this.key);
+  this.key.classList.remove('playing');
 }
 
 const playSound = (e) => {

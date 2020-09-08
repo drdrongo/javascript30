@@ -31,7 +31,6 @@ body {
   height: 400px;
   position: relative;
   transform: translateY(-3px);
-
 }
 
 .hand {
@@ -60,5 +59,4 @@ body {
 .smooth-movement {
   transition: all 0.5s;
   transition-timing-function: cubic-bezier(0, 1.81, 0.54, 0.9);
-
 }
